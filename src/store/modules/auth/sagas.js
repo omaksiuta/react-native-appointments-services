@@ -4,7 +4,7 @@ import { all, takeLatest, call, put } from 'redux-saga/effects';
 import api from '~/services/api';
 // import history from '~/services/history';
 
-import { signInSuccess, signFailure } from './actions';
+import { signInSuccess, signFailure, signUpSuccess } from './actions';
 
 export function* signIn({ payload }) {
   try {
@@ -49,6 +49,7 @@ export function* signUp({ payload }) {
       email,
       password,
     });
+    yield put(signUpSuccess());
     Alert.alert('Sucesso', 'Conta criada com sucesso!');
 
     // history.push('/');
