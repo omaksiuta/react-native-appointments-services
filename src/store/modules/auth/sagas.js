@@ -48,7 +48,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
     Alert.alert('Sucesso', 'Conta criada com sucesso!');
 
