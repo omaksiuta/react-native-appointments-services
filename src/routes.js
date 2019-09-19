@@ -25,6 +25,7 @@ export default (isSigned = false) =>
         }),
         App: createBottomTabNavigator(
           {
+            Dashboard,
             New: {
               screen: createStackNavigator(
                 {
@@ -54,7 +55,7 @@ export default (isSigned = false) =>
                 ),
               },
             },
-            Dashboard,
+
             Profile,
           },
           {
